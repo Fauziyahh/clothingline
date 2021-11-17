@@ -4,43 +4,43 @@ import { ImageBackground, StyleSheet, Text, TouchableOpacity, View,TextInput,Saf
 const DATA = [
     {
       id: 1,
-      title: 'First Item',
+      title: 'Long Flare Dress',
       image: require("../assets/images/CL1.png"),
       price:70,
     },
     {
       id: 2,
-      title: 'Second Item',
+      title: 'Short Silk Dress',
       image: require("../assets/images/CL5.png"),
       price:80,
     },
     {
       id: 3,
-      title: 'Third Item',
+      title: 'Knee Length Bodycon Dress',
       image: require("../assets/images/CL8.png"),
       price:90,
     },
     {
         id: 4,
-        title: 'Third Item',
+        title: 'Short Bodycon Dress',
         image: require("../assets/images/CL14.png"),
         price:100,
       },
       {
         id: 5,
-        title: 'Third Item',
+        title: 'Silk Gown',
         image: require("../assets/images/CL10.png"),
         price:100,
       },
       {
         id: 5,
-        title: 'Third Item',
+        title: 'Straight Gown',
         image: require("../assets/images/CL9.png"),
         price:200,
       },
       {
         id: 5,
-        title: 'Third Item',
+        title: 'Short Flare Dress',
         image: require("../assets/images/CL3.png"),
         price:200,
       },
@@ -50,10 +50,15 @@ const DATA = [
   
 
 
-const home=()=>{
+const home=({navigation})=>{
     const Item = ({ title }) => (
-        <TouchableOpacity style={{ top:20,margin:5}} >
+        <TouchableOpacity style={{ top:20,margin:5,borderWidth:2,height:210,
+        borderRadius:10
+        }} 
+        onPress={()=>{alert("added to carts")}}
+        >
            <ImageBackground source={title.image} style={{height:170,width:100, marginLeft:15}}/> 
+           <Text style={{ marginLeft:5}} >{title.title}</Text>
           <Text style={{ marginLeft:5}} >PRICE:{title.price}</Text>
         </TouchableOpacity>
       );
@@ -67,6 +72,16 @@ const home=()=>{
             <TextInput style={{borderWidth:2,height:30,marginTop:10,width:200
             ,position:"absolute", top:40,marginLeft:60,borderRadius:10,height:40
             }} placeholder="search" />  
+            </View>
+
+            <View>
+                <TouchableOpacity style={{position:"absolute",right:10,borderWidth:2,
+                top:10, width:70,borderRadius:10,height:30,backgroundColor:"#a4ac86"
+            }}
+            onPress={()=>{navigation.navigate("Login")}}
+            >
+                    <Text>Logout</Text>
+                </TouchableOpacity>
             </View>
 
         <View style={{ flex:1,position:"absolute", top:100}}>

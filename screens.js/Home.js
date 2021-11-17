@@ -9,7 +9,7 @@ export default function HomeScreen({ navigation }) {
       }}>
         <ImageBackground style={{width:"100%",height:"100%"}} source={require("../assets/b1.jpg")} />
         <View style={styles.textWrapper}>
-        <Text style={{color:"#fff",fontWeight:"600",fontSize:30}}>Welcome To the</Text>
+        <Text style={{color:"#fff",fontWeight:"800",fontSize:30}}>Welcome To the</Text>
         
       <Text style={{color:"#fff",fontWeight:"300",fontSize:24,}}>Dress Shop</Text>
       <View>
