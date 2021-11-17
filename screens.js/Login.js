@@ -17,7 +17,7 @@ const Login =({navigation})=>{
             
             <TouchableOpacity style={{borderWidth:2,height:30,marginTop:10,width:100,
             alignItems:"center",justifyContent:"center",borderRadius:10
-            }} onPress={()=>{navigation.navigate('signup')}}>
+            }} onPress={()=>{navigation.navigate('home')}}>
                 <Text>Login</Text>
             </TouchableOpacity>
 
