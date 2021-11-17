@@ -5,7 +5,8 @@ import { ImageBackground, StyleSheet, Text, TouchableOpacity, View } from 'react
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Login from './screens.js/Login';
-import HomeScreen from "./screens.js/Home"
+import HomeScreen from "./screens.js/Home";
+import signup from './screens.js/signup';
 
 const Stack = createNativeStackNavigator();
 
@@ -18,6 +19,7 @@ export default function App({navigation}) {
       <Stack.Navigator>
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="signup" component={signup} />
       </Stack.Navigator>
     </NavigationContainer>
       
